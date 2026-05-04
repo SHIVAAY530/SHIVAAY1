@@ -1,1 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ShivaayTech</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
+/* Cursor */
+.cursor-dot{
+position:fixed;
+width:12px;
+height:12px;
+border-radius:50%;
+background:white;
+pointer-events:none;
+z-index:9999;
+transform:translate(-50%,-50%);
+}
+
+.cursor-ring{
+position:fixed;
+width:40px;
+height:40px;
+border:1px solid white;
+border-radius:50%;
+pointer-events:none;
+z-index:9998;
+transform:translate(-50%,-50%);
+transition:.15s;
+}
+
+/* Background */
+.mesh{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(59,130,246,.16), transparent 25%),
+radial-gradient(circle at 80% 30%, rgba(168,85,247,.14), transparent 30%);
+pointer-events:none;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.08);
+}
+
+.gradient{
+background:linear-gradient(90deg,#fff,#a855f7,#6366f1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.card{
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.counter{
+font-size:40px;
+font-weight:bold;
+}
+
+.protected{
+user-select:none;
+-webkit-user-select:none;
+-webkit-touch-callout:none;
+}
+</style>
+
+</head>
+
+<body class="protected">
+
+<div class="mesh"></div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+
+<!-- NAV -->
+
+<nav class="fixed w-full p-5 z-50">
+
+<div class="glass max-w-7xl mx-auto rounded-2xl p-5 flex justify-between">
+
+<h2 class="text-2xl font-bold gradient">
+ShivaayTech
+</h2>
+
+<div class="hidden md:flex gap-8">
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="min-h-screen flex items-center px-6">
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+
+<div>
+
+<h1 class="text-5xl md:text-7xl font-bold gradient mb-8">
+Build Faster.<br>
+Launch Smarter.
+</h1>
+
+<p class="text-xl text-slate-300 mb-8">
+ShivaayTech builds SaaS platforms,
+AI systems, cloud architecture,
+automation workflows and digital products.
+</p>
+
+<div class="flex gap-4">
+
+<button class="bg-white text-black px-8 py-4 rounded-2xl font-bold">
+Get Proposal
+</button>
+
+<a
+href="https://wa.me/917259871530"
+target="_blank"
+class="glass px-8 py-4 rounded-2xl"
+>
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div id="heroCard" class="glass rounded-3xl p-10">
+
+<div class="grid grid-cols-2 gap-4">
+
+<div class="glass p-5 rounded-2xl">
+⚡ 24h Delivery
+</div>
+
+<div class="glass p-5 rounded-2xl">
+🤖 AI Experts
+</div>
+
+<div class="glass p-5 rounded-2xl">
+☁ Cloud Teams
+</div>
+
+<div class="glass p-5 rounded-2xl">
+🌍 Global
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section
+id="services"
+class="py-20 px-6"
+>
+
+<h2 class="text-center text-4xl font-bold mb-12">
+Services
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+<div class="glass p-8 rounded-3xl card">
+SaaS Development
+</div>
+
+<div class="glass p-8 rounded-3xl card">
+AI Automation
+</div>
+
+<div class="glass p-8 rounded-3xl card">
+Cloud Architecture
+</div>
+
+<div class="glass p-8 rounded-3xl card">
+Product Design
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STATS -->
+
+<section class="py-20">
+
+<div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
+
+<div>
+<div class="counter" data-target="2000">0</div>
+Experts
+</div>
+
+<div>
+<div class="counter" data-target="10000">0</div>
+Projects
+</div>
+
+<div>
+<div class="counter" data-target="40">0</div>
+Countries
+</div>
+
+<div>
+<div class="counter" data-target="99">0</div>
+Success %
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PORTFOLIO -->
+
+<section
+id="portfolio"
+class="py-20 px-6"
+>
+
+<h2 class="text-center text-4xl font-bold mb-12">
+Recent Work
+</h2>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+<div class="glass p-8 rounded-3xl card">
+EdTech Platform
+</div>
+
+<div class="glass p-8 rounded-3xl card">
+AI Recruitment System
+</div>
+
+<div class="glass p-8 rounded-3xl card">
+ERP Migration
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+id="contact"
+class="py-20 text-center"
+>
+
+<h2 class="text-5xl gradient font-bold mb-8">
+Let's Build Together
+</h2>
+
+<p class="text-xl mb-8">
+contact@shivaaytech.in
+</p>
+
+<a
+href="https://wa.me/917259871530"
+target="_blank"
+class="bg-white text-black px-10 py-4 rounded-2xl font-bold"
+>
+Chat on WhatsApp
+</a>
+
+</section>
+
+
+<script>
+
+/* cursor */
+
+let dot=document.querySelector(".cursor-dot");
+let ring=document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove",(e)=>{
+
+dot.style.left=e.clientX+"px";
+dot.style.top=e.clientY+"px";
+
+ring.style.left=e.clientX+"px";
+ring.style.top=e.clientY+"px";
+
+});
+
+
+/* 3D hero */
+
+let hero=document.getElementById("heroCard");
+
+document.addEventListener("mousemove",(e)=>{
+
+let x=(e.clientX/window.innerWidth-.5)*10;
+let y=(e.clientY/window.innerHeight-.5)*10;
+
+hero.style.transform=
+`rotateY(${x}deg) rotateX(${-y}deg)`;
+
+});
+
+
+/* counters */
+
+document.querySelectorAll(".counter")
+.forEach(counter=>{
+
+function update(){
+
+let target=+counter.dataset.target;
+let current=+counter.innerText;
+
+let inc=Math.ceil(target/80);
+
+if(current<target){
+
+counter.innerText=
+Math.min(current+inc,target);
+
+setTimeout(update,20);
+
+}
+
+}
+
+update();
+
+});
+
+
+/* protection */
+
+document.addEventListener(
+"contextmenu",
+e=>e.preventDefault()
+);
+
+document.addEventListener(
+"copy",
+e=>e.preventDefault()
+);
+
+document.addEventListener(
+"selectstart",
+e=>e.preventDefault()
+);
+
+</script>
+
+</body>
+</html>
