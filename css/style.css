@@ -9,7 +9,25 @@
     transition: all .2s linear;
     text-decoration: none;
 }
+.contact-info{
+    text-align:center;
+    padding:40px;
+}
 
+.contact-info h2{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.contact-info p{
+    font-size:20px;
+}
+
+.contact-info a{
+    text-decoration:none;
+    color: inherit;
+    font-weight:bold;
+}
 html{
     font-size: 62.5%;
 }
