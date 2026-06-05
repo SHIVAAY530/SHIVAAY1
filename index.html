@@ -109,10 +109,10 @@ document.getElementById("msg").innerHTML="Invalid Login";
 }
 
 }catch(err){
-document.getElementById("msg").innerHTML="Connection Error";
-console.log(err);
+document.getElementById("msg").innerHTML = err.message;
+console.error(err);
+alert(err.message);
 }
-
 }
 
 </script>
