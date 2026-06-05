@@ -87,16 +87,15 @@ if(data.success){
 
 localStorage.setItem("role", data.role);
 
-if(data.role === "Admin"){
-window.location.href = "admin.html";
+if(data.role==="Admin"){
+    window.location.href="admin/dashboard.html";
 }
-else if(data.role === "Staff"){
-window.location.href = "staff.html";
+else if(data.role==="Staff"){
+    window.location.href="staff/dashboard.html";
 }
 else{
-window.location.href = "client.html";
+    window.location.href="client/dashboard.html";
 }
-
 }
 else{
 document.getElementById("msg").innerHTML = "Invalid Login";
