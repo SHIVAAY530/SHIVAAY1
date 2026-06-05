@@ -68,15 +68,10 @@ button{
 </div>
 
 <script>
-
 async function login(){
 
-const username=document.getElementById("username").value;
-const password=document.getElementById("password").value;
-
-const formData=new URLSearchParams();
-formData.append("username",username);
-formData.append("password",password);
+const username = document.getElementById("username").value;
+const password = document.getElementById("password").value;
 
 try{
 
@@ -86,34 +81,35 @@ const response = await fetch(
 
 const data = await response.json();
 
-const data=await response.json();
+console.log(data);
 
 if(data.success){
 
-localStorage.setItem("role",data.role);
+localStorage.setItem("role", data.role);
 
-if(data.role==="Admin"){
-window.location="admin.html";
+if(data.role === "Admin"){
+window.location.href = "admin.html";
 }
-else if(data.role==="Staff"){
-window.location="staff.html";
+else if(data.role === "Staff"){
+window.location.href = "staff.html";
 }
 else{
-window.location="client.html";
+window.location.href = "client.html";
 }
 
 }
 else{
-document.getElementById("msg").innerHTML="Invalid Login";
+document.getElementById("msg").innerHTML = "Invalid Login";
 }
 
-}catch(err){
-document.getElementById("msg").innerHTML = err.message;
+}
+catch(err){
+
 console.error(err);
-alert(err.message);
-}
-}
+document.getElementById("msg").innerHTML = err.message;
 
+}
+}
 </script>
 
 </body>
