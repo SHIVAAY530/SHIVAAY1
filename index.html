@@ -88,13 +88,13 @@ if(data.success){
 localStorage.setItem("role", data.role);
 
 if(data.role==="Admin"){
-    window.location.href="admin/dashboard.html";
+    window.location.href="admin/admin.html";
 }
 else if(data.role==="Staff"){
-    window.location.href="staff/dashboard.html";
+    window.location.href="staff/staff.html";
 }
 else{
-    window.location.href="client/dashboard.html";
+    window.location.href="client/client.html";
 }
 }
 else{
